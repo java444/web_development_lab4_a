@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Paragraph Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="myElement">
+    <p>Welcome to my website!</p>
+</div>
+
+<button id="changeTextButton">Change Text</button>
+
+<script>
+    // Function to change the content of the <p> element
+    function changeText() {
+        document.querySelector('#myElement p').textContent = "Hello there!";
+    }
+
+    // Add event listener to the button
+    document.getElementById('changeTextButton').addEventListener('click', changeText);
+</script>
+
+
+
+<input type="text" id="userInput" placeholder="Enter a number">
+<button onclick="checkInput()">Check</button>
+
+<script>
+    function checkInput() {
+        // Get the value from the input field
+        const input = document.getElementById('userInput').value;
+
+        // Convert the input to a number
+        const number = Number(input);
+
+        // Check if the input is a valid number
+        if (isNaN(number)) {
+            alert("Please insert a number!");
+        } else if (number < 10) {
+            alert("The number is lower than 10");
+        } else {
+            alert("The number is higher than 10");
+        }
+    }
+</script>
+
+<p id="demo"></p>
+   
+<script>
+  let text = "";
+  
+  // Complete the for loop
+  for (let i = 1; i <= 5; i++) { // Start from 1 and go up to 5
+    text += "The number is " + i + "<br>"; // Append the current number with a line break
+  }
+  
+  document.getElementById("demo").innerHTML = text; // Display the result
+</script>
+</body>
+</html>
